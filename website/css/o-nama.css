@@ -1,0 +1,279 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Trebuchet MS, sans-serif;
+}
+.topnav {
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    
+}
+  
+.topnav a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav .right-links a:hover {
+    background-color: transparent;
+    color: yellow ;
+}
+.topnav .left-links a:hover {
+    background-color: transparent;
+    color: yellow ;
+}
+.topnav .right-links a {
+    float: right;
+    color: orange;
+}
+.topnav .left-links a {
+    float: left;
+    color: white;
+}
+.kampus{
+    position: absolute;
+    left: 50%; top: 15%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(0 40%, 100% 40%, 100% 70%, 0 70%); 
+    animation: slideDown 1s;
+    width: 100%;
+    z-index: 0;
+}
+.main-heading{
+    width: 50%;
+    height: 100px;
+    margin: 325px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.main-heading h1{
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+    animation: slideUp 1s; 
+}
+.main-heading h1::after {
+    content: '';
+    display: block; 
+    border-bottom: 4px orange solid;
+    position: absolute; 
+    bottom: -10px; /* Add a unit, for example, pixels */
+    width: 450%; /* Adjust width for responsiveness */
+    left: 50%;
+    transform: translateX(-50%); /* Center the line horizontally */
+}
+.headings h1{
+    color: rgb(204, 50, 50);
+    font-size: 25px;
+    text-align: center;
+    padding-top: 40px;
+}
+.cursive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 50px auto 50px auto;
+}
+.cursive p{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 20px;
+    animation: appear 1s;
+}
+.text-box-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 80%;
+    margin:auto;
+    gap: 10px 10px;
+}
+.text-box{
+    border: 1px solid black;
+    padding: 10px;
+
+}
+.text-box-heading::after{
+    content: "";
+    display: block;
+    width: 90%;
+    height: 2px;
+    background-color: rgb(231, 226, 226);
+    margin: 10px 0;
+}
+.year{
+    color: rgb(28, 100, 101);
+}
+.logo-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    max-width: 80%;
+    margin:auto;
+    gap: 10px 10px;
+}
+
+.logo:nth-child(1) img,
+.logo:nth-child(2) img,
+.logo:nth-child(3) img {
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+}
+
+.logo img {
+    width: 60%; /* Default width for other images */
+    height: auto;
+    object-fit: cover;
+}
+
+.background-lokacija-img {
+    position: relative;
+    width: 100%;
+    background: url('SUPIT_-_projektni_zadatak_-_materijali_za_izradu/img/kakoDoNas.jpg') center center; /* Replace 'your-image.jpg' with your image path */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+}
+
+.kako-do-nas-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 60%;
+    z-index: 1;
+    position: relative;
+}
+.kako-do-nas-textbox{
+    padding: 10px;
+    border: 1px solid rgb(212, 210, 210);
+    height: 450px;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    flex: 1;   
+}
+iframe{
+    max-height: 300px;
+    width: 800px;
+    margin-top: 20px;
+    align-items: center;
+}
+footer {
+    position: absolute;
+    width: 100%;
+    display:flex; 
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 100%;
+    object-fit: cover;
+    height: 230px;
+    z-index: 0;
+}
+.text-container {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+}
+.text-container p:nth-child(2) {
+color: darkred;
+}
+
+@media (max-width: 1370px){
+    iframe{
+        width: 600px;
+    }
+}
+@media (max-width: 1075px){
+    iframe{
+        width: 500px;
+        height: 250px;
+    }
+}
+@media (max-width: 1241px){
+    .kako-do-nas-container {
+        flex-direction: column;
+        align-items: stretch;  
+    }
+}
+@media (max-width: 900px){
+    iframe{
+        width: 400px;
+    }
+}
+@media (max-width: 740px){
+    .main-heading h1::after{
+        width: 350%;
+    }
+    .text-box-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .logo-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+
+}
+@media (max-width: 690px){
+    iframe{
+        width: 400px;
+        height: 175px;
+    }
+}
+@media (max-width: 540px){
+    .main-heading h1::after{
+        width: 250%;
+    }
+    .text-box-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .logo-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@keyframes slideDown {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+@keyframes slideUp {
+    0% {
+        top: 0%;
+    }
+    100% {
+        top: -30%; 
+    }
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+    

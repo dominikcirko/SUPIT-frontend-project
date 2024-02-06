@@ -1,0 +1,175 @@
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.topnav a {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .left-links a:hover {
+  background-color: transparent;
+  color: yellow;
+}
+
+.topnav .left-links a {
+  float: left;
+  color: white;
+}
+.main-heading {
+  width: 100%;
+  height: 100px;
+  margin: -35% auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  max-width: 100%;
+  z-index: 10;
+}
+
+.main-heading h1 {
+  text-align: center;
+  position: relative;
+  font-size: 30px;
+  animation: slideUp 1s;
+}
+
+.main-heading h1::after {
+  content: '';
+  display: block;
+  border-bottom: 4px orange solid;
+  position: absolute;
+  bottom: -10px;
+  width: 400%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#selectedCourse {
+  font-size: 18px;
+}
+
+#nastavniPlan {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.autocomplete::-webkit-scrollbar {
+  width: 0em;
+}
+
+.autocomplete li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete li:hover {
+  background-color: #ddd;
+}
+
+#searchBar {
+  width: 250%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#dataTable {
+  display: block;
+  max-height: 10px;
+  margin-bottom: 25%;
+}
+
+#dataTable thead {
+  background-color: #f2f2f2;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#searchWrapper {
+  position: absolute;
+  margin-top: 10px;
+  margin-bottom: 22%;
+  margin-right: 60%;
+}
+
+.autocomplete {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  border: 1px solid #ccc;
+  width: 254%; 
+  top: 100%; 
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+#searchWrapper p {
+  font-weight: bold;
+  width: 150px;
+}
+.topnav {
+  background-color: black;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  display:flex; 
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+
+footer img {
+  width: 100%;
+  object-fit: cover;
+  height: 230px;
+  z-index: 0;
+}
+.text-container-footer {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  font-weight: 600;
+}
+.text-container-footer p:nth-child(2) {
+color: darkred;
+}
+
+@keyframes slideUp {
+  0% {
+      top: 0%;
+  }
+  100% {
+      top: 10%; 
+  }
+}
+

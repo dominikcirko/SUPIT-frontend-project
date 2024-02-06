@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/contact-form.css">
+
+</head>
+<body>
+  <div class="topnav">
+    <nav class="left-links">
+        <a href="login.html"><strong>Prijavi se</strong></a>
+        <a href="index.html"><strong>Početna</strong></a>
+        <a href="o-nama.html"><strong>O nama</strong></a>
+        <a href="novosti.html"><strong>Novosti</strong></a>
+        <a href="contact-form.html" ><strong>Kontakti</strong></a>
+    </nav>
+  </div>
+  <div class="container">
+      <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="post">
+
+      <label for="ime">Puno ime</label>
+      <input type="text" name="Fullname">
+
+      <label for="email">E-mail</label>
+      <input type="text" name="Email">
+
+      <label for="vaznost">Važnost poruke</label>
+      <select name="Importance">
+        <option value="visoka">Visoka</option>
+        <option value="niska">Niska</option>
+      </select>
+
+      <label for="message">Poruka</label>
+      <textarea id="message" name="Message" style="height:200px"></textarea>
+      <label>
+        Želim primati Newsletter
+        <input type="checkbox" name="ReceiveNewsletter" />
+      </label>
+      <br>
+      <br>
+      <input type="submit">
+      </form>
+  </div>
+  <script src="/js/contact-form.js">
+  </script>
+</body>
+</html>

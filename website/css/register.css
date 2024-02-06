@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Trebuchet MS, sans-serif;
+}
+.topnav {
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+  
+.topnav a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .left-links a:hover {
+    background-color: transparent;
+    color: yellow;
+}
+
+.topnav .left-links a {
+    float: left;
+    color: white;
+}
+div.form {
+    display: block;
+    text-align: center;
+    margin-top: 10%;
+    width: 100%;
+}
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#register button {
+    color: white;
+    width: 100%; 
+    background-color: rgb(121, 121, 182);
+}
+
+div.form h2 {
+
+    margin-bottom: 5px; 
+    font-weight: normal; 
+}
+
+p {
+    margin: 10px 0; 
+}
+
+label {
+    display: block;
+}
+
+input {
+    width: 100%; 
+    padding: 5px; 
+    box-sizing: border-box; 
+}
+footer {
+    position: absolute;
+    width: 100%;
+    display:flex; 
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+
+footer img {
+    width: 100%;
+    object-fit: cover;
+    height: 230px;
+    z-index: 0;
+}
+.text-container-footer {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+}
+.text-container-footer p:nth-child(2) {
+color: darkred;
+}

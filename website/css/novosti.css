@@ -1,0 +1,243 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Trebuchet MS, sans-serif;
+}
+.main-heading{
+    width: 50%;
+    height: 100px;
+    margin: 50px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.main-heading h1{
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+    animation: slideUp 1s; 
+}
+.main-heading h1::after {
+    content: '';
+    display: block; 
+    border-bottom: 4px orange solid;
+    position: absolute; 
+    bottom: -10px;
+    width: 400%;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+.topnav {
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.topnav a {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .left-links a:hover {
+    background-color: transparent;
+    color: yellow;
+}
+
+.topnav .left-links a {
+    float: left;
+    color: white;
+}
+.text-container {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+}
+.text-container p:nth-child(2) {
+    color: darkred;
+}
+footer {
+
+    width: 100%;
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+
+footer img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    z-index: 0;
+}
+.link-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    position: relative;
+    animation: appear 2s;
+}
+.izvrsnost-img{
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    margin: 10%;
+    pointer-events: auto;
+}
+.izvrsnost-background{
+    content: '';
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgba(198, 196, 196, 0.5);
+    border: solid rgb(179, 179, 179);
+    position: relative;
+    margin: 5em;
+}
+.izvrsnost-background p {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.izvrsnost-background p span{
+    color:yellow;
+}
+.wordskills-background{
+    content: '';
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgba(198, 196, 196, 0.5);
+    border: solid rgb(179, 179, 179);
+    position: relative;
+}
+.wordskills-background p {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.wordskills-background p span{
+    color:yellow;
+}
+.wordskills-img {
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    margin: 10%;  
+    pointer-events: auto; 
+}
+
+.junior-ljeto-img{
+    width: 200px;
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    margin: 10%;
+    pointer-events: auto;
+}
+.junior-ljeto-background{
+    content: '';
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: rgba(198, 196, 196, 0.5);
+    border: solid rgb(179, 179, 179);
+    pointer-events: none;
+    position: relative;
+
+}
+.junior-ljeto-background p {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.junior-ljeto-background p span{
+    color: yellow;
+}
+@media (max-height: 700px){
+    footer img{
+        height: 220px;
+    }
+}
+@media (max-height: 675px){
+    footer img{
+        height: 200px;
+    }
+}
+@media (max-height: 650px){
+    footer img{
+        height: 180px;
+    }
+}
+@media (max-width: 1103px){
+    .main-heading h1{
+        font-size: 25px;
+    }
+}
+@media (max-width: 1055px){
+    .main-heading h1{
+        margin-top: 60px;
+    }
+}
+@media (max-width: 948px){
+    .link-container{
+        flex-direction: column;
+    }
+    .wordskills-background{
+        margin-top: 20px;
+    }
+    .junior-ljeto-background{
+        margin-bottom: 20px;
+    }
+    .topnav{
+        z-index: 10;
+    }
+}
+@media (max-width: 926px){
+    .main-heading h1{
+        font-size: 20px;
+    }
+}
+@media (max-width: 780px){
+    .main-heading h1{
+        font-size: 15px;
+    }
+}
+@keyframes slideUp {
+    0% {
+        top: 30%;
+    }
+    100% {
+        top: -10%;
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
